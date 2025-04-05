@@ -1,0 +1,119 @@
+/* Tổng thể trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form nhập liệu */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1 1 200px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+/* Bảng danh sách người dùng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #3b82f6;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.edit-btn {
+    background-color: #10b981;
+}
+
+.edit-btn:hover {
+    background-color: #059669;
+}
+
+.delete-btn {
+    background-color: #ef4444;
+    margin-left: 8px;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+}
+
+/* Nút quay lại */
+.buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #6b7280;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.buttons a:hover {
+    background-color: #4b5563;
+}

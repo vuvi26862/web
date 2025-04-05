@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+    display: flex;
+    /* Căn giữa tất cả phần tử trong header */
+    /* Phân bổ đều logo, menu và tìm kiếm */
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 210px; /* Điều chỉnh kích thước ảnh */
+    height: auto; /* Giữ nguyên tỉ lệ */
+
+}
+
+
+.menu{
+    display: flex;
+    padding: 0 45px;
+    list-style: none;  /* xóa dấu chấm  */
+    font-size: 18px;
+
+}
+
+
+.menu li {
+    position: relative;
+    margin: 13px 18px; /* Khoảng cách giữa các menu */
+    
+}
+
+.menu a {
+    text-decoration: none;  /*bỏ ngạch dưới chân */
+    color: black;
+    
+}
+
+
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    margin-left: -350px;
+   
+    padding: 10px 50px;
+    width: 800px;
+    align-items: flex-start;
+    
+
+}
+.has-submenu {
+    position: relative;
+    
+}
+.has-submenu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    list-style: none;
+    padding: 5px 10px;
+   /* chia đều không gian */
+    
+}
+
+.sub-menu strong {
+    display: block;
+    margin-bottom: 5px;
+   
+}
+
+.sub-menu a {
+    color: gray;
+    display: block;
+    padding: 5px 0;
+}
+
+
+
+
+/* -----------------------------drt */
+.style {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 17px; /* Khoảng cách giữa các phần tử */
+    list-style: none;
+    margin: 0;
+    margin-top: -15px;
+}
+.style i{
+    font-size: 23px;
+    
+}
+.style input {
+    padding: 5px;
+    width: 120px;
+    border: none;
+    border-bottom: 1px solid #333;
+    font-size: 12px; 
+}
+
+
+/* Ẩn menu đăng nhập mặc định */
+.user {
+    display: none;
+    position: absolute;
+    background: white;
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    right: 0;
+    top: 50px;
+    width: 120px;
+}
+
+
+.user.active {
+    display: block;
+}
+
+
+.user li {
+    padding: 8px 10px;
+    text-align: center;
+}
+
+.user li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.user li:hover {
+    background: #f0f0f0;
+}
+
+
+.round-box {
+    width: 1200px;
+    height: 1800px;
+    margin: auto; /* căn giữa theo chiều ngang */
+    margin-top: 50px;
+   
+    /* border: 2px solid rgb(142, 29, 125); /* viền to nhỏ */
+    border-radius: 15px; /* Bo tròn góc */ 
+    background: #fff;
+    border: 1px solid #ddddddf8;
+   
+}
+
+
+.round-box1{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+.round-box2{
+    width: 350px;
+    height: 530px;
+    background: #fff;
+    margin: 0px 30px;     
+    border-radius: 15px; /* Bo tròn góc */
+    border: 1px solid #ddddddf8;
+
+    position: relative; 
+   
+}
+.round-box2 img {
+    right: 4%;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+.round-box2 img:last-child {
+    opacity: 0; /* Ẩn ảnh thứ 2 */
+}
+
+.round-box2:hover img:first-child {
+    opacity: 0; /* Ẩn ảnh đầu tiên khi hover */
+}
+
+.round-box2:hover img:last-child {
+    opacity: 1; /* Hiện ảnh thứ hai */
+}    
+
+
+
+
+
+
+.round-box3{
+    width: 350px;
+    height: 530px;
+    background: #fff;
+    border-radius: 15px; /* Bo tròn góc */
+    border: 1px solid #ddddddf8;
+}
+.round-box3 img{
+    height: 280px;
+    width: 320px;
+    margin-top: 17px;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}   
+
+
+.product-infor {
+    margin-top: 300px;
+    padding: 10px 10px;
+}
+
+.brand {
+    font-size: 12px;
+    color: gray;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-name {
+    font-size: 16px;
+    color: #0056d2;
+    font-weight: bold;
+}
+
+.rating {
+    font-size: 14px;
+    color: #ffc107;
+}
+
+.price {
+    font-size: 18px;
+    color: #d95d12;
+    font-weight: bold;
+}
+
+.offer {
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #d95d12;
+    color: #d95d12;
+    margin-top: 10px;
+}
+
+
+.stock-warning {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #d95d12;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.progress {
+    width: 80%; /* Có thể thay đổi theo mức độ cháy hàng */
+    height: 6px;
+    background: red;
+    border-radius: 3px;
+}
+
+.round-box3 img:last-child {
+    opacity: 0; /* Ẩn ảnh thứ 2 */
+}
+
+.round-box3:hover img:first-child {
+    opacity: 0; /* Ẩn ảnh đầu tiên khi hover */
+}
+
+.round-box3:hover img:last-child {
+    opacity: 1; /* Hiện ảnh thứ hai */
+}
+
+.ww {
+    position: absolute;
+}
+.ww i {
+    font-size: 70px; /* Kích thước icon */
+
+}
+.round-box4{
+    width: 350px;
+    height: 530px;
+    background: #fff;
+    margin: 0px 30px;
+    border-radius: 15px; /* Bo tròn góc */
+    border: 1px solid #ddddddf8;
+}
+
+.round-box4 img{
+    height: 270px;
+    padding: 5px 35px;
+    margin-top: 25px;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+.round-box4 img:last-child {
+    opacity: 0; /* Ẩn ảnh thứ 2 */
+}
+
+.round-box4:hover img:first-child {
+    opacity: 0; /* Ẩn ảnh đầu tiên khi hover */
+}
+
+.round-box4:hover img:last-child {
+    opacity: 1; /* Hiện ảnh thứ hai */
+}
+
+
+
+.round-box22{
+    margin-top: 80px;
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.round-box5, .round-box6, .round-box7 {
+    width: 350px;
+    height: 530px;
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #ddddddf8;
+    
+}
+
+.round-box1 .round-box2 img{
+    width: 300px;
+    height: auto;
+    padding: 5px 0px;
+
+    
+}
+
+.round-box5 img{
+    height: 270px;
+    padding: 5px 35px;
+    margin-top: 25px;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+.round-box5 img:last-child {
+    opacity: 0; /* Ẩn ảnh thứ 2 */
+}
+
+.round-box5:hover img:first-child {
+    opacity: 0; /* Ẩn ảnh đầu tiên khi hover */
+}
+
+.round-box5:hover img:last-child {
+    opacity: 1; /* Hiện ảnh thứ hai */
+}
+
+
+.round-box6 img{
+    height: 270px;
+    padding: 5px 35px;
+    margin-top: 25px;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+.round-box6 img:last-child {
+    opacity: 0; /* Ẩn ảnh thứ 2 */
+}
+
+.round-box6:hover img:first-child {
+    opacity: 0; /* Ẩn ảnh đầu tiên khi hover */
+}
+
+.round-box6:hover img:last-child {
+    opacity: 1; /* Hiện ảnh thứ hai */
+}
+
+
+
+.round-box7 img{
+    height: 270px;
+    padding: 5px 35px;
+    margin-top: 25px;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+.round-box7 img:last-child {
+    opacity: 0; /* Ẩn ảnh thứ 2 */
+}
+
+.round-box7:hover img:first-child {
+    opacity: 0; /* Ẩn ảnh đầu tiên khi hover */
+}
+
+.round-box7:hover img:last-child {
+    opacity: 1; /* Hiện ảnh thứ hai */
+}
+
+.round-box-tiem{
+    margin-top: 80px;
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.round-box-tiem1, .round-box-tiem2, .round-box-tiem3{
+    width: 350px;
+    height: 530px;
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #ddddddf8;
+   
+}
+.round-box-tiem1 img{
+    height: 270px;
+    padding: 5px 35px;
+    margin-top: 25px;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+.round-box-tiem1 img:last-child {
+    opacity: 0; /* Ẩn ảnh thứ 2 */
+}
+
+.round-box-tiem1:hover img:first-child {
+    opacity: 0; /* Ẩn ảnh đầu tiên khi hover */
+}
+
+.round-box-tiem1:hover img:last-child {
+    opacity: 1; /* Hiện ảnh thứ hai */
+}
+
+.round-box-tiem2 img{
+    height: 270px;
+    padding: 5px 35px;
+    margin-top: 25px;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+.round-box-tiem2 img:last-child {
+    opacity: 0; /* Ẩn ảnh thứ 2 */
+}
+
+.round-box-tiem2:hover img:first-child {
+    opacity: 0; /* Ẩn ảnh đầu tiên khi hover */
+}
+
+.round-box-tiem2:hover img:last-child {
+    opacity: 1; /* Hiện ảnh thứ hai */
+}
+.round-box-tiem3 img{
+    height: 270px;
+    padding: 5px 35px;
+    margin-top: 25px;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+.round-box-tiem3 img:last-child {
+    opacity: 0; /* Ẩn ảnh thứ 2 */
+}
+
+.round-box-tiem3:hover img:first-child {
+    opacity: 0; /* Ẩn ảnh đầu tiên khi hover */
+}
+
+.round-box-tiem3:hover img:last-child {
+    opacity: 1; /* Hiện ảnh thứ hai */
+}
+
+
+
+
+
+
+
+
+
+
+ /* <!-- -----------------------footer------------ --> */
+.footer-tred{
+    justify-content: space-between;
+    margin: 50px 0px 0px;
+    padding: 20px;
+    display: flex; /* tự đọng ngang dọc */
+    flex-direction: column;
+    flex-direction: row;
+    gap: 10px; /* Tạo khoảng cách giữa các phần tử */
+    background-color: #f6903b;
+}
+.footer-top, 
+.footer-one, 
+.footer-one1, 
+.footer-one2 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;   
+}
+.footer-top li img{
+    
+    width: 200px;
+    height: auto;
+    filter: contrast(150%); /* Tăng độ đậm */
+}

@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+    display: flex;
+    /* Căn giữa tất cả phần tử trong header */
+    /* Phân bổ đều logo, menu và tìm kiếm */
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 210px; /* Điều chỉnh kích thước ảnh */
+    height: auto; /* Giữ nguyên tỉ lệ */
+
+}
+.menu{
+    display: flex;
+    padding: 0 0 0 30px;
+    list-style: none;  /* xóa dấu chấm  */
+    font-size: 18px;
+
+}
+.menu li {
+    position: relative;
+    margin: 13px 18px; /* Khoảng cách giữa các menu */
+    
+}
+
+.menu a {
+    text-decoration: none;  /*bỏ ngạch dưới chân */
+    color: black;
+    
+}
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    margin-left: -350px;
+   
+    padding: 10px 50px;
+    width: 800px;
+    align-items: flex-start;
+    
+
+}
+.has-submenu {
+    position: relative;
+    
+}
+.has-submenu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    list-style: none;
+    padding: 5px 10px;
+    
+   /* chia đều không gian */
+    
+}
+
+.sub-menu strong {
+    display: block;
+    margin-bottom: 5px;
+   
+}
+
+.sub-menu a {
+    color: gray;
+    display: block;
+    padding: 5px 0;
+}
+/* -----------------------------drt */
+.style {
+  
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: -15px;
+    list-style: none; /* Xóa dấu chấm đầu dòng */
+    
+}
+.style li:first-child {
+    display: flex;
+    align-items: center;
+}
+.style input {
+    padding: 5px;
+    width: 90px;
+    border: none;
+    border-bottom: 1px solid #333;
+    font-size: 12px; 
+    margin-right: -20px;
+   
+}
+
+/* Ẩn menu đăng nhập mặc định */
+.user {
+    display: none;
+    position: absolute;
+    background: white;
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    right: 0;
+    top: 50px;
+    width: 120px;
+
+}
+.user.active {
+    display: block;
+}
+
+.user li {
+    padding: 8px 10px;
+    text-align: center;
+}
+.user li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.user li:hover {
+    background: #f0f0f0;
+}
+
+.style i {
+    font-size: 23px;
+    cursor: pointer; /*  có thể click */
+    margin-left: 5px; /* Cách input một chút */
+    color: #333;
+    transition: color 0.3s;
+}
+
+.logo1{
+    display: flex;  
+    flex-direction: row;
+    padding: 40pt 20px 10pt 20px;  /* Trên, phải, dưới, trái */
+    justify-content: space-around;
+}
+
+
+
+/* <body> */
+
+.img-gioithieu {
+    display: flex;
+    
+}
+
+.img-gioithieu img {
+    width: 100%; /* Tràn hết chiều ngang */
+    height: 470px;; /* Giữ tỷ lệ ảnh */
+}
+
+.item-gioithieu {
+    text-align: center; /* Căn giữa nội dung */
+    max-width: 800px; /* Giới hạn độ rộng */
+    margin:auto; /* Canh giữa */
+}
+
+.textt{
+    padding: 80px 0px 0;
+    font-size: 30px;
+}
+.item-gioithieu h3{
+    font-size: 30px;
+    padding: 40px;
+    font-weight: bold;
+}
+
+.item-gioithieu img { 
+    width: 800px;
+    height: 300px; 
+    display: block;
+
+}
+.produc
+,.text-center
+,.text-conter
+,.text-hear,h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.produc h4{
+    margin-top: 20px;
+
+}
+.produc
+,.text-center
+,.text-hear
+,.text-conter,p {
+    font-size: 16px;
+    line-height: 1.5; /* Giãn dòng giúp dễ đọc */
+    text-align: justify; /* Căn đều hai bên */
+}
+
+/* -----------------------------drt */
+.style{
+    flex: 1;
+    display:flex;
+    margin-left:  144px;
+   
+}
+.style i{
+    font-size: 23px;
+    padding: 5px 15px;  /* khoảng cách */
+}   
+
+
+
+
+
+
+
+
+
+ /* <!-- -----------------------footer------------ --> */
+.footer-tred{
+    justify-content: space-between;
+    margin: 50px 0px 0px;
+    padding: 20px;
+    display: flex; /* tự đọng ngang dọc */
+    flex-direction: column;
+    flex-direction: row;
+    gap: 10px; /* Tạo khoảng cách giữa các phần tử */
+    background-color: #f6903b;
+}
+.footer-top, 
+.footer-one, 
+.footer-one1, 
+.footer-one2 {
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;   
+}

@@ -1,0 +1,80 @@
+
+
+html, body {
+
+    height: 100%; 
+    display: flex; 
+    justify-content: center; /* chiều ngang */
+    align-items: center; /*  giữa theo chiều dọc */
+}   
+.menthod{
+    background-color: rgba(128, 128, 128, 0.071);
+    width: 400px;
+    height: 340px;
+
+    padding: 35px; /*khoang cach voi viem */
+    justify-content: space-around;
+
+    border-radius: 15px;
+}
+p {
+    margin-bottom: 5px; /* Giảm khoảng cách*/
+    
+}
+h1{
+    text-align: center;
+    /* margin-left: 150px; */
+}
+
+.men ul{
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    justify-content: space-between;
+    list-style: none;
+
+}
+.men li {
+   
+    color: #007BFF; 
+    cursor: pointer; /* Thêm hiệu ứng con trỏ khi di chuột qua */
+}
+
+.men li:hover {
+    text-decoration: underline; /* Thêm gạch dưới khi hover */
+}
+
+input[type="text"] {
+    width: 350px; /* Đặt độ rộng của khung nhập liệu */
+    
+    padding: 10px; /* Thêm khoảng cách bên trong khung */
+    border: 1px solid #ccc; /* Thêm viền cho khung nhập liệu */
+    border-radius: 5px; /* Bo tròn các góc của khung */
+}
+input[type="password"] {
+    width: 350px; /* Đặt độ rộng của khung nhập liệu */
+    
+    padding: 10px; /* Thêm khoảng cách bên trong khung */
+    border: 1px solid #ccc; /* Thêm viền cho khung nhập liệu */
+    border-radius: 5px; /* Bo tròn các góc của khung */
+}
+
+.mentr{
+      
+    font-size: 15px;
+    padding: 5px;
+}
+
+.mentr button{
+    width: 375px;   
+    padding: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 15px;
+
+}
+button:hover{
+    background:  rgba(128, 128, 128, 0.071);
+    
+}
+
