@@ -1,24 +1,24 @@
 
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || []; //đọc giỏ hàng localStorage ,đối tượn qua ,chuỗi qua mảng 
 //  Hàm hiển thị giỏ hàng
 function renderCart() {
-    let cartContainer = document.getElementById("cart-item");
-    let totalPrice = 0;
-    cartContainer.innerHTML = "";
+    let cartContainer = document.getElementById("cart-item"); // Lấy HTML vào  giỏ hàng
+    let totalPrice = 0; //  0
+    cartContainer.innerHTML = ""; //XÓA nd cũ trong giỏ hàng  
 
     if (cart.length === 0) {
-        cartContainer.innerHTML = "<p>Giỏ hàng trống</p>";
+        cartContainer.innerHTML = "<p>Giỏ hàng trống</p>"; //kc sp trong gh 
         document.getElementById("total-price").innerText = "0";
-        return;
+        return; 
     }
 
     cart.forEach((item, index) => {
-        let itemTotal = item.price * item.quantity;
+        let itemTotal = item.price * item.quantity; // duyệt từng sản phẩm trong giỏ hàng
         totalPrice += itemTotal;
         
         let productHTML = ` 
-        <div class="cart-item">
+        <div class="cart-item"> //tính tt sp
             <img src="${item.img}" width="50">
             <div>
                <p><strong>${item.name}</strong></p>
@@ -35,16 +35,16 @@ function renderCart() {
         cartContainer.innerHTML += productHTML;
     });
 
-    document.getElementById("total-price").innerText = totalPrice.toLocaleString();
+    document.getElementById("total-price").innerText = totalPrice.toLocaleString(); // Cập nhật gtri 
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-//  Cập nhật số lượng sản phẩm trong giỏ hàng
-function updateQuantity(index, change) {
-    if (cart[index].quantity + change > 0) {
-        cart[index].quantity += change;
+//  kb hàm , + -
+function updateQuantity(index, change) { //tso hàm   
+    if (cart[index].quantity + change > 0) {  //mang arr ds  inde vtrí  mả
+        cart[index].quantity += change; // + - sl sp
     } else {
-        cart.splice(index, 1); // Xóa sản phẩm nếu số lượng = 0
+        cart.splice(index, 1); // x sản phẩm  số lượng 0
     }
     renderCart();
 }
@@ -52,12 +52,12 @@ function updateQuantity(index, change) {
 // Xóa toàn bộ giỏ hàng
 function cleanCart() {
     cart = [];
-    localStorage.removeItem("cart");
+    localStorage.removeItem("cart"); // XÓA  TRONG LOCAL STORAGE
     renderCart();
 }
 window.onload = renderCart;
 
 
-
+//sp  dùng để thêm, xoá hoặc thay thế phần tử ngay tại vị trí cụ
 
 

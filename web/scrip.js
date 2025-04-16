@@ -85,19 +85,19 @@ function toggleUserMenu() {
 
 
 
-// search
-document.getElementById("searchInput").addEventListener("input", function() {
-  let searchValue = this.value.toLowerCase();
-  let products = document.querySelectorAll(".product");
+// // search
+// document.getElementById("searchInput").addEventListener("input", function() {
+//   let searchValue = this.value.toLowerCase();
+//   let products = document.querySelectorAll(".product");
 
-  products.forEach(product => {
-      let name = product.getAttribute("data-name").toLowerCase();
-      let description = product.getAttribute("data-description").toLowerCase();
+//   products.forEach(product => {
+//       let name = product.getAttribute("data-name").toLowerCase();
+//       let description = product.getAttribute("data-description").toLowerCase();
 
-      if (name.includes(searchValue) || description.includes(searchValue)) {
-          product.classList.remove("hidden");
-      } else {
-          product.classList.add("hidden");
-      }
-  });
-});
+//       if (name.includes(searchValue) || description.includes(searchValue)) {
+//           product.classList.remove("hidden");
+//       } else {
+//           product.classList.add("hidden");
+//       }
+//   });
+// });
